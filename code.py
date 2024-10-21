@@ -1,7 +1,7 @@
 import pandas as pd
 
-input_file = "/home/ashish-gautam/workplace/project3/mapped.bed"
-output_file = "/home/ashish-gautam/workplace/project3/coordinates_output_with_frequency.tsv"
+input_file = "data/mapped.bed"
+output_file = "coordinates_output_with_frequency.tsv"
 
 # Read the input file
 df = pd.read_csv(input_file, sep='\t', header=None)
