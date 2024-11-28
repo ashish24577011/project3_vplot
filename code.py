@@ -3,7 +3,7 @@ import pandas as pd
 input_file = "data/mapped.bed"
 output_file = "coordinates_output_with_frequency.tsv"
 
-# Read the input file
+
 df = pd.read_csv(input_file, sep='\t', header=None)
 
 df.columns = [
@@ -16,6 +16,6 @@ df['y_coordinate'] = df['Length']
 
 df_frequency = df.groupby(['x_coordinate', 'y_coordinate']).size().reset_index(name='frequency')
 
-# Save the output file
+
 df_frequency.to_csv(output_file, sep='\t', header=False, index=False)
 
